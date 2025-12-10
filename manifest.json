@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Csdiy_Auto_Resource_Downloader(CARD)",
+    "version": "1.0.0",
+    "description": "一键下载课程页面中的多重格式资源",
+    "permissions": [
+        "activeTab",
+        "downloads",
+        "scripting"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "一键下载课程网站界面内多重格式资源"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    }
+}

@@ -16,15 +16,15 @@
 
 支持对当前界面文档的一键提取：
 
-<center><img src = "../figures/interface1.png" style="zoom: 50%;"/></center>
+<center><img src = "figures/interface1.png" style="zoom: 50%;"/></center>
 
 点击第一个按钮可以切换至指定URL进行下载：
 
-<center><img src = "../figures/interface2.png" style="zoom: 50%;"/></center>
+<center><img src = "figures/interface2.png" style="zoom: 50%;"/></center>
 
 点击“扫描当前页面”之后可以获取所有资源文档下载链接：
 
-<center><img src = "../figures/interface3.png" style="zoom: 50%;"/></center>
+<center><img src = "figures/interface3.png" style="zoom: 50%;"/></center>
 
 点击下载，所有资源会放置在默认下载路径中以`/resources_downloads/hostname+extendname`命名的文件夹下.
 

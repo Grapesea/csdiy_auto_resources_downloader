@@ -34,3 +34,4 @@ TODO：
     列一下自己的思路以免之后忘掉：
     F12可以看到所有目标文件是以url导航形式存放的，所以只抓取`<main id="course-content-section">`中形如`<a href="/courses/6-006-introduction-to-algorithms-spring-2020/resources/mit6_006s20_lec1">Lecture 1: Introduction notes (PDF)</a>`的部分并逐个访问，迭代这个函数本身1次实现对目标文件的下载.
 * 能够分类（文件夹）下载，怀疑要接入个免费模型来智能分类，没有思路，暂未解决.
+* 修复指定URL下载功能的bug，目前一直报错为`无法访问URL: DOMParser is not defined`，还在修复中.

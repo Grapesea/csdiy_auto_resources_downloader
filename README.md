@@ -1,6 +1,6 @@
 # CSDIY_auto_resource_downloader（CARD, 课程资源下载助手）
 
-这是一个由Claude 4.5 Sonnet辅助之下完成的Edge浏览器配套插件，能够实现对包括但不限于csdiy指南涉及到的部分课程资源网页（目前已经测试了UCB CS70, CS188, Stanford CS106L/X等课程官网）下的PDF,PPT,PPTX,`.zip`,`.doc`,`.docx`,`.md`,`.tex`等格式资源一键提取，可以节省一定的时间.
+这是一个由Claude 4.5 Sonnet辅助之下完成的Edge浏览器配套插件，能够实现对包括但不限于cc98页面、csdiy指南涉及到的部分课程资源网页（目前已经测试了UCB CS70, CS188, Stanford CS106L/X等课程官网）下的PDF,PPT,PPTX,`.zip`,`.doc`,`.docx`,`.md`,`.tex`等格式资源一键提取，可以节省一定的时间.
 
 ## Getting Started
 
@@ -11,6 +11,8 @@
 ### v1.0 初始化
 
 支持解压缩之后放置在选定路径，使用Edge扩展实现功能.
+
+目前支持的文件抓取逻辑：页面下载超链接直接以`.pdf`等格式为后缀.
 
 操作面板：（以CS106X资源官网为例）
 

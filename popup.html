@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 400px;
+            padding: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h3 {
+            margin: 0 0 15px 0;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 13px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        button.secondary {
+            background-color: #2196F3;
+        }
+
+        button.secondary:hover {
+            background-color: #0b7dda;
+        }
+
+        #status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            display: none;
+        }
+
+        #status.info {
+            background-color: #e3f2fd;
+            color: #1976d2;
+            display: block;
+        }
+
+        #status.success {
+            background-color: #e8f5e9;
+            color: #388e3c;
+            display: block;
+        }
+
+        #status.error {
+            background-color: #ffebee;
+            color: #c62828;
+            display: block;
+        }
+
+        .pdf-list {
+            max-height: 250px;
+            overflow-y: auto;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .pdf-item {
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pdf-item:last-child {
+            border-bottom: none;
+        }
+
+        .pdf-name {
+            flex: 1;
+            word-break: break-all;
+        }
+
+        .current-url {
+            font-size: 11px;
+            color: #666;
+            background-color: #f9f9f9;
+            padding: 5px 8px;
+            border-radius: 3px;
+            margin-bottom: 10px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>课程页面资源下载</h3>
+
+    <!--<button id="toggleModeBtn" class="secondary">切换到：指定URL地址并下载</button> -->
+
+    <div id="currentSection" class="section">
+        <label>当前页面</label>
+        <div class="current-url" id="currentUrl">加载中...</div>
+        <button id="scanCurrentBtn">扫描当前页面</button>
+    </div>
+
+    <div id="urlSection" class="section" style="display:none;">
+        <label for="urlInput">输入URL地址</label>
+        <input type="text" id="urlInput" placeholder="https://example.com/course" />
+        <button id="scanUrlBtn" class="secondary">扫描指定URL</button>
+    </div>
+
+    <div class="section">
+        <label for="formatInput">目标格式（可选）</label>
+        <input type="text" id="formatInput" placeholder="示例: /.doc/.tex  （留空表示默认全部格式*）" />
+        <text> *默认的全部格式包含：/.pdf/.ppt/.pptx/.zip/.doc/.docx/.md/.tex</text>
+    </div>
+
+    <!-- 资源列表、下载与状态栏 -->
+    <div id="status"></div><button id="downloadBtn" disabled style="display:none;">下载所有已找到的文件</button>
+    <div id="pdfList" class="pdf-list" style="display:none;"></div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
